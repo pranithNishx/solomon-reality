@@ -1,0 +1,45 @@
+name: solomon-reality
+region: blr
+services:
+  - name: backend
+    source_dir: backend
+    github:
+      repo: pranithNishx/solomon-reality
+      branch: main
+      deploy_on_push: true
+    build_command: npm install --production
+    run_command: node server.js
+    http_port: 5000
+    instance_count: 1
+    instance_size_slug: basic-xxs
+    envs:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        value: your_strong_secret_change_this
+        type: SECRET
+      - key: DATABASE_URL
+        value: /app/backend/database.sqlite
+      - key: PORT
+        value: "5000"
+      - key: FRONTEND_URL
+        scope: RUN_AND_BUILD_TIME
+        value: ${APP_URL}
+  
+  - name: frontend
+    source_dir: frontend
+    github:
+      repo: pranithNishx/solomon-reality
+      branch: main
+      deploy_on_push: true
+    build_command: npm install && npm run build
+    run_command: npm start
+    http_port: 3000
+    instance_count: 1
+    instance_size_slug: basic-xxs
+    routes:
+      - path: /
+    envs:
+      - key: NEXT_PUBLIC_API_URL
+        scope: RUN_AND_BUILD_TIME
+        value: ${backend.PUBLIC_URL}/api
