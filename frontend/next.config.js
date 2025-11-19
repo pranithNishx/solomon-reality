@@ -5,7 +5,7 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   
-  // Skip build errors for pages that can't be statically generated
+  // TypeScript and ESLint configuration
   typescript: {
     ignoreBuildErrors: false,
   },
@@ -16,6 +16,12 @@ const nextConfig = {
   // Experimental features for better error handling
   experimental: {
     missingSuspenseWithCSRBailout: false,
+  },
+  
+  // Optimize error handling
+  onDemandEntries: {
+    maxInactiveAge: 25 * 1000,
+    pagesBufferLength: 2,
   },
   
   images: {
