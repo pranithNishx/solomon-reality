@@ -5,6 +5,19 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   
+  // Skip build errors for pages that can't be statically generated
+  typescript: {
+    ignoreBuildErrors: false,
+  },
+  eslint: {
+    ignoreDuringBuilds: false,
+  },
+  
+  // Experimental features for better error handling
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
+  },
+  
   images: {
     domains: [
       'ik.imagekit.io',

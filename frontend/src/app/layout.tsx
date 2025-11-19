@@ -16,6 +16,10 @@ export const metadata: Metadata = {
   description: 'Discover premium residential and commercial properties across India',
 };
 
+// Force dynamic rendering for all pages
+export const dynamic = 'force-dynamic';
+export const dynamicParams = true;
+
 export default function RootLayout({
   children,
 }: {
