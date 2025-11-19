@@ -47,7 +47,7 @@ export default function EditPropertyPage() {
   const router = useRouter();
   const queryClient = useQueryClient();
   const { isAuthenticated, user } = useAuthStore();
-  const id = params.id as string;
+  const id = params?.id as string;
   const [images, setImages] = useState<string[]>([]);
   const [videos, setVideos] = useState<string[]>([]);
   const [floorPlan, setFloorPlan] = useState<string>('');
