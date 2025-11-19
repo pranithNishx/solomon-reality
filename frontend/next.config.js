@@ -83,8 +83,8 @@ const nextConfig = {
     ];
   },
   
-  // Output configuration
-  output: 'standalone',
+  // Output configuration - temporarily disabled to fix build
+  // output: 'standalone',
 };
 
 module.exports = nextConfig;
