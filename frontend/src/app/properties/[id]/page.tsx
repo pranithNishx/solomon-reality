@@ -11,7 +11,7 @@ import { motion } from 'framer-motion';
 export default function PropertyDetailsPage() {
   const params = useParams();
   const router = useRouter();
-  const id = params.id as string;
+  const id = params?.id as string;
 
   const { data, isLoading, error } = useQuery({
     queryKey: ['property', id],

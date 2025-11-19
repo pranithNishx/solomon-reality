@@ -1,4 +1,4 @@
-// File: C:\Users\nishu\OneDrive\Desktop\solomon-reality\frontend\src\app\admin\properties\new\page.tsx
+// File: /Users/rijanrayamajhi/Desktop/solomon-reality/frontend/src/app/admin/properties/new/page.tsx
 import * as entry from '../../../../../../src/app/admin/properties/new/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

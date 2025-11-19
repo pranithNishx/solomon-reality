@@ -12,7 +12,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
 
 export function Navbar() {
-  const pathname = usePathname();
+  const pathname = usePathname() || '/';
   const { user, isAuthenticated, clearAuth } = useAuthStore();
   const isAdmin = user?.role === 'admin';
   const [isScrolled, setIsScrolled] = useState(false);

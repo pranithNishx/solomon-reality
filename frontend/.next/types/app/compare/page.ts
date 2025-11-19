@@ -1,4 +1,4 @@
-// File: C:\Users\nishu\OneDrive\Desktop\solomon-reality\frontend\src\app\compare\page.tsx
+// File: /Users/rijanrayamajhi/Desktop/solomon-reality/frontend/src/app/compare/page.tsx
 import * as entry from '../../../../src/app/compare/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
