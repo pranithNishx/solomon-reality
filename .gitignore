@@ -13,8 +13,12 @@ yarn.lock
 .env.development.local
 .env.test.local
 .env.production.local
-.env.development
-.env.test
-.env.production
-*.env
 
+# Next.js build artifacts
+.next/
+frontend/.next/
+frontend/out/
+
+# Logs
+logs/
+frontend/.next/standalone/
