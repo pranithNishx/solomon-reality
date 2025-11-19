@@ -14,7 +14,7 @@ function ComparePageContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [propertyIds, setPropertyIds] = useState<string[]>(() => {
-    const ids = searchParams.get('ids');
+    const ids = searchParams?.get('ids');
     return ids ? ids.split(',').slice(0, 4) : [];
   });
 
